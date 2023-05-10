@@ -20,11 +20,16 @@ public class MainMenu : MonoBehaviour
         }
         SetLevelBtns(score, false, false);
     }
-    public void SetLevelBtns(int[] score, bool additionLevelByPromocodeActivated, bool additionLevelByAdsActivated)
+    public void SetLevelBtns(int[] score, bool additionLevelByPromocodeActivated, bool additionLevelByAdsActivated) //if add new lvl btn then add in end of list to make save&load correct;
     {
         for(int i = 0; i < _levelBtns.Count; i++)
         {
-            _levelBtns[i].SetLevel(i, score[i]);
+            int lvlScore = 0;
+            if (score.Length < i)
+            {
+                lvlScore = score[i];
+            }
+            _levelBtns[i].SetLevel(i, lvlScore);
             if (_levelBtns[i] is PromocodeLevelBtn)
             {
                 if (additionLevelByPromocodeActivated)
