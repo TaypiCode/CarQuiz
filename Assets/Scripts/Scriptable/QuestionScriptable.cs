@@ -5,8 +5,6 @@ using UnityEngine;
 public class QuestionScriptable : ScriptableObject
 {
     [ScriptableObjectId] public string itemId;
-    [SerializeField] private string[] _answer = new string[4];
-    [SerializeField] private int _rightAnswerId;
-    public string[] Answer { get => _answer; }
-    public int RightAnswerId { get => _rightAnswerId;}
+    [SerializeField] private string _answer;
+    public string Answer { get => _answer; }
 }

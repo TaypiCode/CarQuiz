@@ -10,13 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
-  m_Name: ImageQuestScriptable
+  m_Name: F1_AlphaTauri
   m_EditorClassIdentifier: 
-  itemId: f5ea7efa-21b8-47e7-8a11-0832301cea80
-  _answer:
-  - 1
-  - 2
-  - 3
-  - 4
-  _rightAnswerId: 0
-  _sprite: {fileID: 21300000, guid: d2dae7596ec99ee409f1b586d5897867, type: 3}
+  itemId: 3c8fe71e-022b-4628-b677-cd6b8786532a
+  _answer: F1 AlphaTauri
+  _sprite: {fileID: 21300000, guid: 35ab4ecf6d9726a4789baa03c2fc4323, type: 3}

@@ -63,6 +63,7 @@ public class LoadGame : MonoBehaviour
                     _save.score[GameData.LaunchedLevelId] = GameData.ScoreReached;
                 }
             }
+            print(_save.score[GameData.LaunchedLevelId]);
             print(GameData.ScoreReached);
             _promocode.FillActivatedPromocodes(_save.activatedPromocodes);
             AdsScript.AdditionalLevelActivated = _save.additionalLevelsByAdsIsAvailable;
@@ -78,6 +79,7 @@ public class LoadGame : MonoBehaviour
             RateUsScript.ShowRateUs();
         }
         FindObjectOfType<AdsScript>().ShowNonRewardAd();
+        FindObjectOfType<SaveGame>().SaveProgress();
     }
     public void SetIsMobile()
     {

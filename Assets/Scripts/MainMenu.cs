@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class MainMenu : MonoBehaviour
@@ -25,7 +26,7 @@ public class MainMenu : MonoBehaviour
         for(int i = 0; i < _levelBtns.Count; i++)
         {
             int lvlScore = 0;
-            if (score.Length < i)
+            if (i < score.Length)
             {
                 lvlScore = score[i];
             }

@@ -17,11 +17,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float _answerShowDelay;
 
     [Header("Quest")]
-    [SerializeField] private GameObject _textQuestCanvas;
-    [SerializeField] private GameObject _audioQuestCanvas;
     [SerializeField] private GameObject _imageQuestCanvas;
-    [SerializeField] private TextMeshProUGUI _questText;
-    [SerializeField] private AudioSource _questAudioSource;
     [SerializeField] private Image _questImage;
 
     private List<QuestionScriptable> _randomizedQuestions = new List<QuestionScriptable>();
@@ -67,7 +63,6 @@ public class LevelManager : MonoBehaviour
     }
     private void CreateQuest()
     {
-        _questAudioSource.Stop();
         _currentQuestNumber++;
         if(_currentQuestNumber > _randomizedQuestions.Count)
         {
@@ -76,27 +71,8 @@ public class LevelManager : MonoBehaviour
         }
         _questHeaderText.text = "Задание "+_currentQuestNumber.ToString() +"/"+_randomizedQuestions.Count;
         int questId = _currentQuestNumber - 1;
-        if(_randomizedQuestions[questId] is TextQuestScriptable)
+        if (_randomizedQuestions[questId] is ImageQuestScriptable)
         {
-            _textQuestCanvas.SetActive(true);
-            _audioQuestCanvas.SetActive(false);
-            _imageQuestCanvas.SetActive(false);
-            TextQuestScriptable quest = _randomizedQuestions[questId] as TextQuestScriptable;
-            _questText.text = quest.Text;
-        }
-        else if (_randomizedQuestions[questId] is AudioQuestScriptable)
-        {
-            _textQuestCanvas.SetActive(false);
-            _audioQuestCanvas.SetActive(true);
-            _imageQuestCanvas.SetActive(false);
-            AudioQuestScriptable quest = _randomizedQuestions[questId] as AudioQuestScriptable;
-            _questAudioSource.clip = quest.Audio;
-        }
-        else if (_randomizedQuestions[questId] is ImageQuestScriptable)
-        {
-            _textQuestCanvas.SetActive(false);
-            _audioQuestCanvas.SetActive(false);
-            _imageQuestCanvas.SetActive(true);
             ImageQuestScriptable quest = _randomizedQuestions[questId] as ImageQuestScriptable;
             _questImage.sprite = quest.Sprite;
             _questImage.preserveAspect = true;
@@ -112,11 +88,26 @@ public class LevelManager : MonoBehaviour
         _answerBtns.Clear();
         List<int> ids = new List<int>();
         List<int> randomizedAnswersId = new List<int>();
-        for (int i = 0; i < _randomizedQuestions[questId].Answer.Length; i++)
+        List<QuestionScriptable> availableAnswers = new List<QuestionScriptable>();
+        availableAnswers.AddRange(GameData.Questions);
+        QuestionScriptable currentCar = _randomizedQuestions[questId];
+        availableAnswers.Remove(currentCar);
+        List<QuestionScriptable> randomizedAnswers = new List<QuestionScriptable>();
+        randomizedAnswers.Add(currentCar);
+        for (int i = 0; i < 3; i++)
+        {
+            if (i < availableAnswers.Count)
+            {
+                int r = Random.Range(0, availableAnswers.Count);
+                randomizedAnswers.Add(availableAnswers[r]);
+                availableAnswers.Remove(availableAnswers[r]);
+            }
+        }
+        for (int i = 0; i < randomizedAnswers.Count; i++)
         {
             ids.Add(i);
         }
-        for (int i = 0; i < _randomizedQuestions[questId].Answer.Length; i++)
+        for (int i = 0; i < randomizedAnswers.Count; i++)
         {
             int r = Random.Range(0, ids.Count);
             int id = ids[r];
@@ -127,8 +118,8 @@ public class LevelManager : MonoBehaviour
         {
             GameObject btnObj = Instantiate(_answerBtnPrefub, _answerBtnsListSpawn);
             Button btn = btnObj.GetComponent<Button>();
-            btn.GetComponentInChildren<TextMeshProUGUI>().text = _randomizedQuestions[questId].Answer[randomizedAnswersId[i]];
-            bool isRight = randomizedAnswersId[i] == _randomizedQuestions[questId].RightAnswerId ? true : false;
+            btn.GetComponentInChildren<TextMeshProUGUI>().text = randomizedAnswers[randomizedAnswersId[i]].Answer;
+            bool isRight = randomizedAnswers[randomizedAnswersId[i]] == currentCar ? true : false;
             btn.onClick.AddListener(delegate { Answer(isRight); });
             _answerBtns.Add(btnObj);
             btnObj.GetComponent<ShowEffect>().Show(_answerShowDelay * i);
@@ -160,10 +151,6 @@ public class LevelManager : MonoBehaviour
     {
         GameData.SetCompleteLevel(true, _levelTimer.GetTime());
         _endGame.ShowCanvas(true);
-    }
-    public void PlayAudio()
-    {
-        _questAudioSource.Play();
     }
     public void AddTime()
     {
