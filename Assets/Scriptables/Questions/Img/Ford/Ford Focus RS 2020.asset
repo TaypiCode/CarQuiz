@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Ford Focus RS 2020
+  m_EditorClassIdentifier: 
+  itemId: 5a3c3b54-3ae0-43a2-ba59-4fa1686d65e6
+  _answer: Ford Focus RS
+  _sprite: {fileID: 21300000, guid: c242b606ffd4a7e4f9d1c6d4b5b64654, type: 3}

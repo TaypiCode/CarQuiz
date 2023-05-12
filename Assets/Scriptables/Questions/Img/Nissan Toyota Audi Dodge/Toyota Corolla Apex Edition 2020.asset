@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Toyota Corolla Apex Edition 2020
+  m_EditorClassIdentifier: 
+  itemId: 726f7953-ea85-4e5b-9cd1-5af4c4ae3d86
+  _answer: Toyota Corolla Apex Edition
+  _sprite: {fileID: 21300000, guid: 01e79e5e489f35b43a11817bb9f0b84b, type: 3}

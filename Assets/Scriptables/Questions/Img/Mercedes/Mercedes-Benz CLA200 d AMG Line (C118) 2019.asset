@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Mercedes-Benz CLA200 d AMG Line (C118) 2019
+  m_EditorClassIdentifier: 
+  itemId: 937b6298-3b7d-4962-a2d8-c9368a5cf58c
+  _answer: Mercedes-Benz CLA200 d AMG Line (C118)
+  _sprite: {fileID: 21300000, guid: 02c7e4d5189c47343b8b83f62b91d660, type: 3}

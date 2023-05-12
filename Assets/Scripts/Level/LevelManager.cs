@@ -7,7 +7,9 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] private int _answersCount = 3;
     [SerializeField] private TextMeshProUGUI _questHeaderText;
+    [SerializeField] private TextMeshProUGUI _haveAnswersCountText;
     [SerializeField] private TimeSlider _timeSlider;
     [SerializeField] private EndGame _endGame;
 
@@ -24,11 +26,14 @@ public class LevelManager : MonoBehaviour
     private List<GameObject> _answerBtns = new List<GameObject>();
     private Timer _levelTimer;
     private int _currentQuestNumber = 0;
+    private int _haveAnswersCount;
+
     private void Start()
     {
         _levelTimer = gameObject.AddComponent<Timer>();
         ResetTimer();
         RandomizeQuests();
+        SetAnswersCount(_answersCount);
     }
     private void Update()
     {
@@ -130,10 +135,19 @@ public class LevelManager : MonoBehaviour
         if (isRightAnswer)
         {
             CreateQuest();
+            SetAnswersCount(_answersCount);
         }
         else
         {
-            Loose();
+            SetAnswersCount(_haveAnswersCount - 1); 
+            if (_haveAnswersCount <= 0)
+            {
+                Loose();
+            }
+            else
+            {
+                CreateRandomizedAnswers(_currentQuestNumber - 1);
+            }
         }
     }
     private void ResetTimer()
@@ -161,5 +175,13 @@ public class LevelManager : MonoBehaviour
             time = maxTime;
         }
         _levelTimer.SetTimer(null, time);
+        SetAnswersCount(_answersCount);
+
+
+    }
+    private void SetAnswersCount(int newValue)
+    {
+        _haveAnswersCount = newValue;
+        _haveAnswersCountText.text = _haveAnswersCount.ToString();
     }
 }

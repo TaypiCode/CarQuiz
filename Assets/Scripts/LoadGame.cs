@@ -63,11 +63,20 @@ public class LoadGame : MonoBehaviour
                     _save.score[GameData.LaunchedLevelId] = GameData.ScoreReached;
                 }
             }
-            print(_save.score[GameData.LaunchedLevelId]);
-            print(GameData.ScoreReached);
-            _promocode.FillActivatedPromocodes(_save.activatedPromocodes);
+            if (_save.activatedPromocodes != null)
+            {
+                _promocode.FillActivatedPromocodes(_save.activatedPromocodes);
+            }
             AdsScript.AdditionalLevelActivated = _save.additionalLevelsByAdsIsAvailable;
-            _mainMenu.SetLevelBtns(_save.score, _save.additionalLevelsByPromocodeIsAvailable, _save.additionalLevelsByAdsIsAvailable);
+            if (_save.score.Length > 0)
+            {
+                _mainMenu.SetLevelBtns(_save.score, _save.additionalLevelsByPromocodeIsAvailable, _save.additionalLevelsByAdsIsAvailable);
+            }
+            else
+            {
+                _mainMenu.SetClearLevelBtns(_save.additionalLevelsByPromocodeIsAvailable, _save.additionalLevelsByAdsIsAvailable);
+            }
+                
         }
         else//no save
         {

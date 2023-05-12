@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Ford Mustang SVT Cobra R 2000
+  m_EditorClassIdentifier: 
+  itemId: 97c5283c-36d3-482d-9002-e61894b12902
+  _answer: Ford Mustang SVT Cobra R
+  _sprite: {fileID: 21300000, guid: 6efdc2906a630cf448bc6135cf038bf7, type: 3}

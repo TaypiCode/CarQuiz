@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Chevrolet Corvette ZR1 Convertible 2019
+  m_EditorClassIdentifier: 
+  itemId: da01cd72-9ef0-4bcb-84f8-6a77a6abeb7e
+  _answer: Chevrolet Corvette ZR1 Convertible
+  _sprite: {fileID: 21300000, guid: 89a6bf017a28cdb448991b7ab9b4a4ad, type: 3}

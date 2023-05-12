@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Lincoln Navigator
+  m_EditorClassIdentifier: 
+  itemId: 2ada204b-f62b-4d69-a737-759f086c30ce
+  _answer: Lincoln Navigator
+  _sprite: {fileID: 21300000, guid: 73926c4f4c586f749a2b0af9d06c4f85, type: 3}

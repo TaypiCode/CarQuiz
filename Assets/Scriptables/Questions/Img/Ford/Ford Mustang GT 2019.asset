@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Ford Mustang GT 2019
+  m_EditorClassIdentifier: 
+  itemId: 47026980-4368-47ce-9013-5386d9aaf527
+  _answer: Ford Mustang GT
+  _sprite: {fileID: 21300000, guid: 1eb6c58c6a74db642bd2bcf4a729776f, type: 3}

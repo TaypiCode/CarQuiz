@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Hummer H2 2010
+  m_EditorClassIdentifier: 
+  itemId: 7960ca2a-167a-4bf0-a7c9-6b804cc217b8
+  _answer: Hummer H2
+  _sprite: {fileID: 21300000, guid: 9478eddcdf915cd4395858db5965762c, type: 3}

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Audi A1 Sportback 30 TFSI Sport 2018
+  m_EditorClassIdentifier: 
+  itemId: a6919cfd-076a-4928-a1bf-d02de86e1bef
+  _answer: Audi A1 Sportback 30 TFSI Sport
+  _sprite: {fileID: 21300000, guid: 6756b7dd69e3b2c4f82fd8446329a1bc, type: 3}

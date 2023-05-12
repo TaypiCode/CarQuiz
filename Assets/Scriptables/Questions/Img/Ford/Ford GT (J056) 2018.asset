@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Ford GT (J056) 2018
+  m_EditorClassIdentifier: 
+  itemId: 0ec18f5a-2dfb-4aca-b028-7f1ea33fcc9e
+  _answer: Ford GT (J056)
+  _sprite: {fileID: 21300000, guid: 82a7710c71955be42ae56d9a859760ee, type: 3}

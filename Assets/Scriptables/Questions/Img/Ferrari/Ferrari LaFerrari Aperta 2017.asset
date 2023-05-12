@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Ferrari LaFerrari Aperta 2017
+  m_EditorClassIdentifier: 
+  itemId: b88c81f3-e5ea-4136-87ea-4fc03d4f9637
+  _answer: Ferrari LaFerrari Aperta
+  _sprite: {fileID: 21300000, guid: 923e8a6b9a75f534ea22a079cbb55c2a, type: 3}

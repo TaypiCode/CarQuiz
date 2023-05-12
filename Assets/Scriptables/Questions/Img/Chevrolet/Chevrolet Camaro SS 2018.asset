@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1f2add7b01cf94ea6da9e074f6586c, type: 3}
+  m_Name: Chevrolet Camaro SS 2018
+  m_EditorClassIdentifier: 
+  itemId: ead40643-62f1-4f0d-80bf-6af99ef6b277
+  _answer: Chevrolet Camaro SS
+  _sprite: {fileID: 21300000, guid: 80f6e5126d34b6b4c9754f4edbf74f96, type: 3}

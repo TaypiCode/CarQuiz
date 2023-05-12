@@ -12,14 +12,14 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private List<LevelBtn> _levelBtns = new List<LevelBtn>();
     [SerializeField] private TextMeshProUGUI _totalScoreText;
     [SerializeField] private GameObject _difficultCanvas;
-    public void SetClearLevelBtns()
+    public void SetClearLevelBtns(bool additionLevelByPromocodeActivated =false, bool additionLevelByAdsActivated = false)
     {
         int[] score = new int[_levelBtns.Count];
         for(int i = 0; i < score.Length; i++)
         {
             score[i] = 0;
         }
-        SetLevelBtns(score, false, false);
+        SetLevelBtns(score, additionLevelByPromocodeActivated, additionLevelByAdsActivated);
     }
     public void SetLevelBtns(int[] score, bool additionLevelByPromocodeActivated, bool additionLevelByAdsActivated) //if add new lvl btn then add in end of list to make save&load correct;
     {
