@@ -9,9 +9,7 @@ public class AdsScript : MonoBehaviour
     private float _noRewardAdsDelay = 185; //min 180(3 min) in yandex
     private static float _noRewardAdsTimer;
     private static bool _timerStarted;
-    private static bool _additionalLevelActivated;
-
-    public static bool AdditionalLevelActivated { get => _additionalLevelActivated; set => _additionalLevelActivated = value; }
+    private AdsLevelBtn _adsLevelBtn;
 
     public enum Placements
     {
@@ -70,12 +68,7 @@ public class AdsScript : MonoBehaviour
     {
         if (placement == Placements.AddLevel.ToString())
         {
-            AdsLevelBtn[] levels = FindObjectsOfType<AdsLevelBtn>();
-            for (int i = 0; i < levels.Length; i++)
-            {
-                levels[i].SetAvailable(true);
-            }
-            _additionalLevelActivated = true;
+            _adsLevelBtn.Activated = true;
             FindObjectOfType<SaveGame>().SaveProgress();
         }
         if (placement == Placements.Continue.ToString())
@@ -83,8 +76,9 @@ public class AdsScript : MonoBehaviour
             FindObjectOfType<EndGame>().Continue();
         }
     }
-    public void ShowAdsForLevelActivate()
+    public void ShowAdsForLevelActivate(AdsLevelBtn btn)
     {
+        _adsLevelBtn = btn;
         ShowAd(Placements.AddLevel);
     }
     public void ShowAdsForContinue()

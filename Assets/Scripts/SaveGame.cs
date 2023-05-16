@@ -38,7 +38,13 @@ public class SaveGame : MonoBehaviour
     {
         save.score = _menu.GetScoreByLevel();
         save.additionalLevelsByPromocodeIsAvailable = _promocode.AdditionalLevelsPromocodeActivated;
-        save.additionalLevelsByAdsIsAvailable = AdsScript.AdditionalLevelActivated;
+        List<bool> adsLevelBtnActivatedStatus = new List<bool>();
+        AdsLevelBtn[] adsLevelBtns = FindObjectsOfType<AdsLevelBtn>();
+        foreach(AdsLevelBtn btn in adsLevelBtns)
+        {
+            adsLevelBtnActivatedStatus.Add(btn.Activated);
+        }
+        save.additionalLevelsByAdsIsAvailable = adsLevelBtnActivatedStatus.ToArray();
         save.activatedPromocodes = _promocode.GetActivatedPromocodes();
 
         int totalScore = save.score.Sum();
@@ -64,5 +70,5 @@ public class Save
     public int[] score;
     public string[] activatedPromocodes;
     public bool additionalLevelsByPromocodeIsAvailable;
-    public bool additionalLevelsByAdsIsAvailable;
+    public bool[] additionalLevelsByAdsIsAvailable;
 }

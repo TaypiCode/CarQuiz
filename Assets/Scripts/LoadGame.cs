@@ -67,16 +67,26 @@ public class LoadGame : MonoBehaviour
             {
                 _promocode.FillActivatedPromocodes(_save.activatedPromocodes);
             }
-            AdsScript.AdditionalLevelActivated = _save.additionalLevelsByAdsIsAvailable;
             if (_save.score.Length > 0)
             {
-                _mainMenu.SetLevelBtns(_save.score, _save.additionalLevelsByPromocodeIsAvailable, _save.additionalLevelsByAdsIsAvailable);
+                _mainMenu.SetLevelBtns(_save.score, _save.additionalLevelsByPromocodeIsAvailable);
             }
             else
             {
-                _mainMenu.SetClearLevelBtns(_save.additionalLevelsByPromocodeIsAvailable, _save.additionalLevelsByAdsIsAvailable);
+                _mainMenu.SetClearLevelBtns(_save.additionalLevelsByPromocodeIsAvailable);
             }
-                
+            AdsLevelBtn[] adsLevelBtns = FindObjectsOfType<AdsLevelBtn>();
+            for(int i = 0; i < adsLevelBtns.Length; i++)
+            {
+                if(i < _save.additionalLevelsByAdsIsAvailable.Length)
+                {
+                    adsLevelBtns[i].Activated = _save.additionalLevelsByAdsIsAvailable[i];
+                }
+                else
+                {
+                    adsLevelBtns[i].Activated = false;
+                }
+            }
         }
         else//no save
         {

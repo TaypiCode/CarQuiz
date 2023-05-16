@@ -12,16 +12,16 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private List<LevelBtn> _levelBtns = new List<LevelBtn>();
     [SerializeField] private TextMeshProUGUI _totalScoreText;
     [SerializeField] private GameObject _difficultCanvas;
-    public void SetClearLevelBtns(bool additionLevelByPromocodeActivated =false, bool additionLevelByAdsActivated = false)
+    public void SetClearLevelBtns(bool additionLevelByPromocodeActivated =false)
     {
         int[] score = new int[_levelBtns.Count];
         for(int i = 0; i < score.Length; i++)
         {
             score[i] = 0;
         }
-        SetLevelBtns(score, additionLevelByPromocodeActivated, additionLevelByAdsActivated);
+        SetLevelBtns(score, additionLevelByPromocodeActivated);
     }
-    public void SetLevelBtns(int[] score, bool additionLevelByPromocodeActivated, bool additionLevelByAdsActivated) //if add new lvl btn then add in end of list to make save&load correct;
+    public void SetLevelBtns(int[] score, bool additionLevelByPromocodeActivated) //if add new lvl btn then add in end of list to make save&load correct;
     {
         for(int i = 0; i < _levelBtns.Count; i++)
         {
@@ -44,14 +44,7 @@ public class MainMenu : MonoBehaviour
             }
             else if(_levelBtns[i] is AdsLevelBtn)
             {
-                if (additionLevelByAdsActivated)
-                {
-                    _levelBtns[i].SetAvailable(true);
-                }
-                else
-                {
-                    _levelBtns[i].SetAvailable(false);
-                }
+                
             }
             else
             {

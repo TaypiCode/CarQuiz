@@ -251,6 +251,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unavailable
       objectReference: {fileID: 0}
+    - target: {fileID: 6274422711339831013, guid: 2a6befa2f659bfd489341ea448e0910e,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9217475818316967179, guid: 2a6befa2f659bfd489341ea448e0910e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -417,10 +422,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4099439084676695584, guid: 06e7a363d17fef04b887ede37fc9fd0e,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8629088531392735253, guid: 06e7a363d17fef04b887ede37fc9fd0e,
         type: 3}
       propertyPath: m_Name
       value: LevelBtnCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974768190766893513, guid: 06e7a363d17fef04b887ede37fc9fd0e,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06e7a363d17fef04b887ede37fc9fd0e, type: 3}

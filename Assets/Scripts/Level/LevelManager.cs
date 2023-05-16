@@ -135,7 +135,8 @@ public class LevelManager : MonoBehaviour
         if (isRightAnswer)
         {
             CreateQuest();
-            SetAnswersCount(_answersCount);
+            int newAnswersCount = _haveAnswersCount + 1 >= _answersCount ? _answersCount : _haveAnswersCount + 1;
+            SetAnswersCount(newAnswersCount);
         }
         else
         {

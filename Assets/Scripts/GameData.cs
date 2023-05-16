@@ -5,7 +5,7 @@ using UnityEngine;
 public static class GameData
 {
     private static readonly int[] _scorePerSecByLevelDifficult = new int[3] { 1, 4, 16 };
-    private static readonly int[] _timeByLevelDifficult = new int[3] { 120, 60, 30 };
+    private static readonly int[] _timeByLevelDifficult = new int[3] { 240, 180, 60 };
     private static int _currentLevelDifficult; //1-3 easy norm hard
     private static int _launchedLevelId;
     private static int _scoreReached;
